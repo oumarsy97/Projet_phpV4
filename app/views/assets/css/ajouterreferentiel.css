@@ -1,0 +1,78 @@
+.referentiel-selection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  background-color: white;
+  justify-content: space-between;
+  font-size: 22px;
+
+ 
+}
+
+.referentiel-selection .checkbox1 {
+  margin-left: 2%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.referentiel-selection .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 90%;
+  padding: 2rem;
+}
+
+.referentiel-selection .top {
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+
+  div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 8%;
+  }
+  hr {
+    rotate: 90deg;
+    width: 100%;
+    margin-bottom: 50%;
+    margin-top: 50%;
+  }
+}
+
+.referentiel-selection .circle {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: #018f88;
+  position: relative;
+  z-index: 2;
+}
+
+.referentiel-selection button{
+  background-color: #a01616;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.referentiel-selection form #back{
+  
+  background-color: rgb(237, 235, 235);
+  color: black;
+}
+.referentiel-selection button:nth-child(2){
+  margin-left: 1%;
+  background-color: #018f88;
+  color: #f5f5f5;
+}

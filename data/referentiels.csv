@@ -1,0 +1,11 @@
+id,libelle,status,id_promotion
+1,AWS,desactive,1
+2,"Dev Hackeuse",desactive,1
+3,"Dev Web/mobile",active,1
+4,"Referent Digital",desactive,1
+5,"Dev Data",desactive,1
+6,"Dev Web/mobile",active,6
+7,"Dev Data",active,6
+8,"Referent Digital",active,6
+9,AWS,active,6
+10,"Dev Hackeuse",desactive,6

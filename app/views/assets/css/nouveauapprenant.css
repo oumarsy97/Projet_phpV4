@@ -1,0 +1,125 @@
+
+
+  .apprenant-one-modal {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+   
+  }
+
+.apprenant-one {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: white;
+    justify-content: space-between;
+  }
+
+  .apprenant-one .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .apprenant-one button:nth-child(2) {
+    margin-left: 1%;
+  }
+
+  .apprenant-one header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 8px;
+    color: #6d5f7b;
+    button {
+      background-color: #f5f5f5;
+      border: none;
+      padding: 8px 16px;
+      font-size: 1.5rem;
+      border-radius: 5px;
+    }
+  }
+
+  .apprenant-one .middle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    input{
+        outline: none;
+        padding: .75rem;
+        border-radius: 5px;
+        border: 1px solid #f5f5f5;
+    }
+    label{
+        margin-bottom: 4px;
+    }
+  }
+
+  .apprenant-one .cercle {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #018f88;
+    position: relative;
+    z-index: 2;
+  }
+
+  .apprenant-one .top{
+    display: flex;
+    width: 100%;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+  }
+
+  .apprenant-one hr{
+    flex: 1;
+    width: 100%;
+    margin: 0 1rem;
+    height: 0;
+    align-self: center;
+  }
+
+  .apprenant-one .flex-col {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-bottom: 1rem;
+  }
+
+  .apprenant-one .bottom{
+    display: flex;
+    button{
+        background-color: #018f88;
+        color: white;
+    }
+  }
+
+  .apprenant-one button{
+    background-color: #f5f5f5;
+    border: none;
+    padding: 1.5% 3%;
+    border-radius: 5px;
+    cursor: pointer;
+    &:nth-child(2){
+        background-color: #f5f5f5;
+        color: #6d5f7b;
+    }
+  }
+
+  

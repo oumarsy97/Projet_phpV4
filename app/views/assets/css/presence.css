@@ -1,0 +1,321 @@
+
+
+.liste-presences {
+    height: 90%;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    border-radius: 0.5em;
+    
+    justify-content: center;
+    
+
+
+.zone1 {
+    height: 8%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 1.8%;
+    left: 0.5%;
+    select {
+        border: 1px solid gray;
+        border-radius: 0.5em;
+        outline: none;
+        background-color: transparent;
+        width: 100%;
+        color: #6b6d84;
+        font-size: 20px;
+        font-weight: bold;
+      }
+}
+#statut {
+    height: 75%;
+    width: 8%;
+    border-radius: 0.5em;
+    position: absolute;
+    left: 1%;
+    background-color: white;
+}
+
+#ref {
+    height: 75%;
+    width: 10%;
+    border-radius: 0.5em;
+    position: absolute;
+    left: 12%;
+    background-color: white;
+}
+#datechoice {
+    height: 75%;
+    width: 15%;
+    border-radius: 0.5em;
+    position: absolute;
+    left: 26%;
+    border: 1px solid gray;
+    background-color: white;
+    color: black;
+    font-size: 1.1rem;
+    padding: 1em;
+}
+#refresh {
+    height: 75%;
+    width: 10%;
+    border-radius: 0.5em;
+    position: absolute;
+    left: 43%;
+    border: none;
+    background-color: #008F89;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tableau {
+    position: absolute;
+    top: 10%;
+    height: 75%;
+    width: 100%;
+    border-radius: 0.7em;
+    padding: 1%;
+}
+
+/* .footer-pres {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 40%;
+    flex-direction: row;
+    font-size: .7em;
+} */
+
+#itemsperpage {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    position: relative;
+    left: 1%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.navigation {
+    
+    background-color: transparent;
+    font-size: 1rem;
+    position: relative;
+    display: flex;
+    left: 55%;
+    height: 100%;
+    width: 33%;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1em;
+}
+.navigation>button {
+    height: 1.1rem;
+    width: 1.1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* i {
+    height: .7em;
+    width: .7em;
+    font-weight: 100;
+} */
+
+.tableau  table {
+    font-size: 0.7em;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 1%;
+    font-size: 16px;
+    overflow: scroll;
+}
+
+.tableau table thead{
+    height: 3em;
+    background-color: #dfe9fa;
+    border-radius: 0.9em;
+}
+
+
+.tableau table tr {
+
+    border-bottom: .1em solid rgba(128, 128, 128, 0.103);
+}
+
+tr th:nth-child(7) {
+    width: 10%;
+    text-align: center;
+}
+
+tr td:nth-child(1) {
+    
+    height: 2.4rem;
+    width: 18%;
+    text-align: center;
+    
+}
+
+tr td:nth-child(2) {
+    text-align: center;
+    height: 2.4rem;
+    width: 10%;
+    
+}
+
+tr td:nth-child(3) {
+    text-align: center;
+    height: 2.4rem;
+    width: 19%;
+    
+}
+
+tr td:nth-child(4) {
+    text-align: center;
+    height: 2.4rem;
+    width: 10%;
+    
+}
+
+tr td:nth-child(5) {
+    text-align: center;
+    height: 2.4rem;
+    width: 10%;
+    
+}
+
+tr td:nth-child(6) {
+    text-align: center;
+    height: 2.4rem;
+    width: 10%;
+    
+}
+
+tr td:nth-child(7) {
+    color: rgb(87, 172, 8);
+    height: 2.4rem;
+    width: 100%;
+    border-radius: 0.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+tr td p {
+    background-color: rgb(230, 230, 230);
+    height: 60%;
+    width: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.3em;
+}
+
+.params {
+    height: 4em;
+    width: 4em;
+    background-color: rgb(0, 173, 179);
+    border-radius: 50%;
+    border: none;
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+}
+
+
+.iconeparametre{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    background-color: #008F89;
+    font-weight: bold;
+    color: #fff;
+    position: fixed;
+    right: 0.5%;
+bottom: 1%;
+}
+
+}
+
+.footer-pres {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 40%;
+    flex-direction: row;
+    font-size: .7em;
+}
+
+#itemsperpage {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    position: relative;
+    left: 1%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.navigation2 {
+    
+    background-color: transparent;
+    font-size: 1rem;
+    position: relative;
+    display: flex;
+    left: 70%;
+    right: 2%;
+    height: 100%;
+    width: 20%;
+    align-items: center;
+    justify-content: space-around;
+    
+    span{
+        font-size: 1rem;
+        position: relative;
+        
+    }
+}
+.navigation2>button {
+    height: 1.1rem;
+    width: 3.1rem;
+    background-color: transparent;
+    padding: 3%;
+    border: none;
+    cursor: pointer;
+    i {
+        height: .7em;
+        width: .7em;
+        font-weight: 100;
+    }
+}
+.nav2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
+    button{
+        height: 1.1rem;
+        width: 3.1rem;
+        background-color: transparent;
+        padding: 3%;
+        border: none;
+        cursor: pointer;
+       
+    }
+}

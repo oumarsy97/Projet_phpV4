@@ -1,0 +1,116 @@
+.apprenant-modal {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .3);
+  
+    position: absolute;
+  }
+
+.form-apprenant {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: white;
+    justify-content: space-between;
+  }
+
+  .form-apprenant .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .form-apprenant button:nth-child(2) {
+    margin-left: 1%;
+  }
+
+  .form-apprenant header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 8px;
+    color: #6d5f7b;
+    button {
+      background-color: #f5f5f5;
+      border: none;
+      padding: 8px 16px;
+      font-size: 1.5rem;
+      border-radius: 5px;
+    }
+  }
+
+  .form-apprenant .middle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    input{
+        outline: none;
+        padding: .75rem;
+        border-radius: 5px;
+        border: 1px solid #f5f5f5;
+    }
+    label{
+        margin-bottom: 4px;
+    }
+  }
+
+  .form-apprenant .cercle {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #018f88;
+    position: relative;
+    z-index: 2;
+  }
+
+  .form-apprenant .top{
+    display: flex;
+    width: 100%;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+  }
+
+  .form-apprenant hr{
+    flex: 1;
+    width: 100%;
+    margin: 0 1rem;
+    height: 0;
+    align-self: center;
+  }
+
+  .form-apprenant .flex-col {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-bottom: 1rem;
+  }
+
+  .form-apprenant .bottom{
+    display: flex;
+    justify-content: flex-end;
+    button{
+     background-color: #f5f5f5;
+     border: none;
+     padding: 1.5% 3%;
+     border-radius: 5px;
+     cursor: pointer;
+     &:nth-child(2){
+      background-color: #018f88;
+         color: white;
+     }
+   }
+  }
