@@ -40,7 +40,7 @@ $pro = [
     ];
    // $fichier = data . '/promotion.csv';
    //savefile('../data/promotion.csv', $pro);
-    $promotions = loadFile('../data/promotion.csv');
+    $promotions = loadFile(promotion);
     //inverser le tableau
     $promotions = array_reverse($promotions);
    

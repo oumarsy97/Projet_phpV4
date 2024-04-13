@@ -2,6 +2,7 @@
 
 require_once models . '/presenceModel.php';
 $presences = presenceAtDate(date('Y-m-d'));
+//dd($presences);
 $referentiels = referentielsActives();
  isset($_SESSION['donneepresences']) ? $donneePresence = $_SESSION['donneepresences'] : $_SESSION['donneepresences'] = $presences;
 
@@ -29,4 +30,4 @@ $nbrpage = ceil($nbrp / $itemparpage);
 $presences = paginateTable($_SESSION['donneepresences'], $itemparpage, $currentPagePresence);
 
 
-//require_once views . '/presence.view.php';
+require_once views . '/presence.view.php';

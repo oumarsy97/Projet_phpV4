@@ -7,6 +7,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    
     span{
         font-size: 22px;
         font-weight: 500;
@@ -98,6 +99,7 @@
 }
 
 .table{
+    overflow-y: croll;
     width: 100%;
     height: 40%;
     margin-top: 10px;
@@ -316,4 +318,91 @@
     position: fixed;
     right: 0.5%;
 bottom: 1%;
+}
+
+.btneditpromo{
+    padding: 1.5% 2%;
+    width: 100%;
+    height: 2.4vw;
+    background-color:transparent;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    .editicon{
+        font-size: 1.6vw;
+        width:  2.8vw!important;
+        height: 2.0vw;
+        color: #6d6d6d;
+        
+    }
+   
+}
+
+
+.footer-presP {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 35%;
+    flex-direction: row;
+    font-size: .7em;
+}
+
+#itemsperpage {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    position: relative;
+    left: 1%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.navigation2 {
+    
+    background-color: transparent;
+    font-size: 1rem;
+    position: relative;
+    display: flex;
+    left: 70%;
+    right: 2%;
+    height: 100%;
+    width: 20%;
+    align-items: center;
+    justify-content: space-around;
+    
+    span{
+        font-size: 1rem;
+        position: relative;
+        
+    }
+}
+.navigation2>button {
+    height: 1.1rem;
+    width: 3.1rem;
+    background-color: transparent;
+    padding: 3%;
+    border: none;
+    cursor: pointer;
+    i {
+        height: .7em;
+        width: .7em;
+        font-weight: 100;
+    }
+}
+.nav2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
+    button{
+        height: 1.1rem;
+        width: 3.1rem;
+        background-color: transparent;
+        padding: 3%;
+        border: none;
+        cursor: pointer;
+       
+    }
 }

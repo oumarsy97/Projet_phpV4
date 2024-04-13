@@ -12,8 +12,8 @@
               <div class="top">...</div>
               <!-- <div> -->
               <img src="../app/views/assets/img/classe.jpg" alt="" />
-              <p><?= $referentiel['libelle'] ?></p>
-              <h4><?= $referentiel['status'] ?></h4>
+              <p style="font-weight: bold;font-size: 16px;"><?= $referentiel['libelle'] ?></p>
+              <h2 style="color: <?= $referentiel['status'] == 'active' ? 'green' : 'red' ?>;"   ><?= $referentiel['status'] ?></h2>
               <!-- </div> -->
             </div>
             <?php endforeach; ?>
@@ -24,17 +24,17 @@
           <div class="top">
             <h3>Nouveau referentiel</h3>
           </div>
-          <div class="bottom">
+          
+            <form action="" method="post" class="bottom">
+              <input type="hidden" name="page" id="" value="referentiels"/>
+            <input type="hidden" name="newreferentiel" id="" value="newreferentiel"/>
             <label for="libelle">Libelle</label>
-            <input
-              type="text"
-              name="libelle"
-              id=""
-              placeholder="Entrez le libelle"/>
-            <label for="Description">Description</label>
+            <input type="text" name="libelle" id="" placeholder="Entrez le libelle"/>
+             <label for="Description">Description</label>
             <input type="textarea"name="Description"id="" placeholder="Entrez la Description"/>
-            <button>Enregistrer</button>
-          </div>
+            <button type="submit">Enregistrer</button>
+            </form>
+          
         </div>
        
       </div>

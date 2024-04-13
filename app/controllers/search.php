@@ -12,6 +12,7 @@ switch($page){
     case 'referentiels':
            // dd($referentiels);
         include models .'/referentielsModel.php';
+        $referentiels = $_SESSION['referentiels'];
         $referentiels = recherche($referentiels, 'libelle', $mot);
         include views . '/referentiels.view.php';
         break;

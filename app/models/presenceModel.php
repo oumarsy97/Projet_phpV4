@@ -36,14 +36,16 @@ $data = [
     
     ];
 $promotion = promotionActive();
+//dd($promotion);
 
 
 //dd($presence);
 
 function allpresencePromotionActive(){
     $referentielsPromotionActive = referentielsActives();
-    $fichier = '../data/presences.csv';
-    $presences = getdata($fichier);
+   // dd($referentielsPromotionActive);
+    $presences = getdata(presences);
+    
     $filtered = [];
     foreach($referentielsPromotionActive as $referentiel){
         foreach($presences as $presence){
@@ -53,11 +55,12 @@ function allpresencePromotionActive(){
         }
     
     }
+    //dd($filtered);
     return $filtered;
 }
 
 function getlibelle($idreferentiel){
-    $referentiels = referentielsActives();
+    $referentiels = referentielsPromotionActive();
     foreach($referentiels as $referentiel){
         if($referentiel['id'] == $idreferentiel){
             return $referentiel['libelle'];
@@ -67,8 +70,7 @@ function getlibelle($idreferentiel){
 }
 
 function presenceAtDate($date){
-    $fichier = '../data/presences.csv';
-    $presences = getdata($fichier);
+    $presences = allpresencePromotionActive();
     $filtered = [];
     foreach($presences as $presence){
         if($presence['date'] == $date){

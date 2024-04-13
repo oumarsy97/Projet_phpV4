@@ -15,6 +15,50 @@ function getData($fichier){
     return $data;
 }
 
+function insertData($fichier, $data){
+    $fp = fopen($fichier, 'a'); // Ouvre le fichier en mode append (ajout à la fin du fichier)
+    fputcsv($fp, $data); // Écrit les valeurs dans le fichier CSV
+    fclose($fp); // Ferme le fichier
+    // $data = array_merge(loadFile($fichier), $data);
+    // savefile($fichier, $data);
+}
+
+function referentielsPromotionActive(){
+    $id_promotionActive = $_SESSION['id_promotion'];
+
+    $referentiels = getData(referentiels);
+     $referentielsPromotionActive = [];
+     foreach ($referentiels as $referentiel) {
+         if($referentiel['id_promotion'] == $id_promotionActive){
+             $referentielsPromotionActive[] = $referentiel;
+         }
+         
+     }
+     return $referentielsPromotionActive;
+ }
+
+ function referentielsActives(){
+    $referentiels = referentielsPromotionActive();
+    $referentielsActives = [];
+    foreach ($referentiels as $referentiel) {
+        if($referentiel['status'] == 'active'){
+            $referentielsActives[] = $referentiel;
+        }
+        
+    }
+    return $referentielsActives;
+ }
+
+function insertDataA($referentiels, $values) {
+    $file = 'votre_fichier.csv';
+    
+    $fp = fopen($file, 'a'); // Ouvre le fichier en mode append (ajout à la fin du fichier)
+    
+    fputcsv($fp, $values); // Écrit les valeurs dans le fichier CSV
+    
+    fclose($fp); // Ferme le fichier
+}
+
 function promotionActive(){
     $fichier = '../data/promotion.csv';
     $promotions = getData($fichier);
@@ -30,31 +74,8 @@ function promotionActive(){
 
 
    //les referentiels du promoActive
-function referentielsPromotionActive(){
-    $promotionActive = promotionActive();
-    $fichier = '../data/referentiels.csv';
-    $referentiels = getData($fichier);
-    $referentielsPromotionActive = [];
-    foreach ($referentiels as $referentiel) {
-        if($referentiel['id_promotion'] == $promotionActive['id']){
-            $referentielsPromotionActive[] = $referentiel;
-        }
-        
-    }
-    return $referentielsPromotionActive;
-}
 
-  //les referentiels Actives du promoActive
-function referentielsActives(){     
-    $data = referentielsPromotionActive();
-foreach($data as $row){
-    if( ($row['status'] == 'active')){
-        $referentiels[] = $row;
-    }
-}
 
-return $referentiels;
-}
 
 //pagination
 function paginateTable($array, $pageSize, $currentPage) {

@@ -44,21 +44,20 @@
                 </tbody>
                
             </table>
-            <div class="footer-pres">
+        <div class="footer-pres">
             <span style="font-weight: 400; color: rgb(54, 54, 54); position: relative; left: 0.1%;font-size: 15px;">Items per page: </span>
             <form method="POST">
-    <select name="itemsperpage">
-        <option value="5">5</option>
-        <option value="10">10</option>
-        <option value="20">20</option>
-        <option value="30">30</option>
-    </select>
-    <input type="submit" value="page">
-    </form>
+            <select name="itemsperpage">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>
+            <input type="submit" value="page">
+            </form>
 
             <div class="navigation2">
             <span id="numview"><?=   $currentPagePresence  ?> - <?= $itemparpage*$currentPagePresence ?></span>
-               
                <div class="nav2">
                     <form action="" method="post">
                         <input type="hidden" name="page" value="presence">
