@@ -35,11 +35,12 @@
     <tbody>
         <?php foreach ($promotions as $promo) : ?>
     <tr>
-    <td class="img" style="width: 30%;height: 100%;"><img src="../app/views/assets/img/icon.png" alt=""> <span><?= $promo['libelle'] ?></span></td>
+    <img src="../app/views/assets/img/icon.png" alt="Placeholder Image">
     <td><?= $promo['dateDebut'] ?></td>
     <td><?= $promo['dateFin'] ?></td>
     <td style="color: <?= ($promo['statut'] === 'en cours' ? 'green' : 'red') ?>;"><?= $promo['statut'] ?></td>
     <td>
+
     <form action="" method="post">
         <input type="hidden" name="page" value="promotion">
         <input type="hidden" name="changePromo" value="<?= $promo['id'] ?>">
@@ -95,4 +96,5 @@
     </div>
     </div>
     </div>
+     
 
