@@ -15,7 +15,12 @@ if(isset($_POST['newreferentiel']) && $_POST['newreferentiel'] !=''){
         'status' => $status,
         'id_promotion' => $id_promotion
     ];
-    ajouterReferentiel($newref);
+    $ref = [
+        'libelle' => $libelle,
+        'status' => $status
+    ];
+    ajouterReferentiel($newref, referentiels);
+    ajouterReferentiel($ref, listereferentiels);
     $referentiels = referentielsPromotionActive();
 }
 include  views . '/referentiels.view.php';

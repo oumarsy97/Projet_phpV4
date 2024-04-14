@@ -35,6 +35,7 @@ $data = [
     ]
     
     ];
+    // savefile(presences, $data);
 $promotion = promotionActive();
 //dd($promotion);
 

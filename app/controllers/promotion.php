@@ -1,5 +1,6 @@
 <?php
     include models . '/promotionModel.php';
+    //dd(promotionActive());
     $_SESSION['id_promotion'] = promotionActive()['id'];
     
     if(isset($_POST['recherche']) && $_POST['recherche'] !='' ){
@@ -10,6 +11,7 @@
 
     if(isset($_POST['changePromo']) && $_POST['changePromo'] !=''){
         $id_promotion = $_POST['changePromo'];
+        //dd($id_promotion);
         promotionCheck($_SESSION['id_promotion'], $id_promotion);
         $_SESSION['id_promotion'] = $id_promotion;
         $promotions = loadFile(promotion);
@@ -28,5 +30,13 @@
        
     }
     $promotions = paginateTable($promotions, $itemparpage, $currentPagePromo);
+    if(isset($_POST['direction']) &&  $_POST['direction'] == 'ajouterreferentiel'){
+        include controllers . '/ajouterreferentielle.php';
+        //include views . '/ajouterreferentielle.view.php';
+    }else
+    if(isset($_POST['direction']) &&  $_POST['direction'] == 'ajouterpromotion'){
+        include controllers . '/promotion.php';
+        //include views . '/ajouterpromotion.view.php';
+    }else
     include views . '/promotion.view.php';
 

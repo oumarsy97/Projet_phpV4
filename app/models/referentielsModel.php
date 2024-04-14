@@ -1,11 +1,11 @@
 <?php
 
 
- function ajouterReferentiel($newref){
-    $referentiels = array_map('str_getcsv', file(referentiels));
+ function ajouterReferentiel($newref, $file) {
+    $referentiels = array_map('str_getcsv', file($file));
     $referentiels[] = $newref;
     // Enregistrer les modifications dans le fichier CSV
-    $fp = fopen(referentiels, 'w');
+    $fp = fopen($file, 'w');
     foreach ($referentiels as $ref) {
         fputcsv($fp, $ref);
     }

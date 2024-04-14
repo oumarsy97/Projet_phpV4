@@ -13,7 +13,7 @@
      define ("referentiels", "../data/referentiels.csv");
      define ("utilisateurs", "../data/utilisateurs.csv");
      define ("presences", "../data/presences.csv");
-     define("listereferentiels", "../data/listereferentiels.csv");
+     define("listereferentiels", "../data/listreferentiels.csv");
 
 function dd($var) {
     echo "<pre>";

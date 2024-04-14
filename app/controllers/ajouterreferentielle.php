@@ -75,5 +75,5 @@ $ref =[
 include models . '/ajouterreferentielleModel.php';
 //dd($referentiels);
 
-include views . '/'.$page.'.view.php';
+include views . '/ajouterreferentielle.view.php';
 $_SESSION['page'] = 'referentielsController';
