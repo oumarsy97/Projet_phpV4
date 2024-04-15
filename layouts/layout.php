@@ -22,6 +22,7 @@
        <link rel="stylesheet" href="../app/views/assets/css/presence.css">
        <link rel="stylesheet" href="../app/views/assets/css/nouveaupromo.css">
        <link rel="stylesheet" href="../app/views/assets/css/ajouterreferentiel.css">
+       <link rel="stylesheet" href="../app/views/assets/css/dashboard.css">
 
 
 

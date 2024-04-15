@@ -14,7 +14,7 @@
             <input type="hidden" name="page" value="utilisateurs">
               <select name="id_referentiel" id="" >
                 <?php foreach($referentiels as $referentiel): ?>
-                  <option value="<?= $referentiel['id'] ?>" <?= isset($_SESSION['id_referentiel'] ) ? 'selected' : '' ?>><?= $referentiel['libelle'] ?></option>
+                  <option      <?= isset($_SESSION['id_referentiel']) && $_SESSION['id_referentiel'] == $referentiel['id'] ? 'selected' : '' ?> value="<?= $referentiel['id'] ?>" ><?= $referentiel['libelle'] ?></option>
                   <?php endforeach; ?>
                 </select>
                 <button type="submit">Rafraîchir</button>

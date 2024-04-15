@@ -6,9 +6,10 @@
       <p>- MENU</p>
       <nav>
         <li>
-            <a href="dashboard.html" style="text-decoration: none;color: black">
-                <p>Dashboard</p>
-            </a>
+        <form action="" method="post"> 
+                <input type="hidden" name="page" value="dashboard">
+                <button>Dashboard</button>
+            </form>
         </li>
         <li>
              <i class="fa fa-building" aria-hidden="true"></i>

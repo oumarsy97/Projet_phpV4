@@ -1,7 +1,8 @@
 <?php
     include models . '/promotionModel.php';
     //dd(promotionActive());
-    $_SESSION['id_promotion'] = promotionActive()['id'];
+    $promotionActive = promotionActive();
+    $_SESSION['id_promotion'] = $promotionActive['id'];
     
     if(isset($_POST['recherche']) && $_POST['recherche'] !='' ){
         $promotions = recherche($promotions, 'libelle', $_POST['recherche']);
@@ -14,6 +15,7 @@
         //dd($id_promotion);
         promotionCheck($_SESSION['id_promotion'], $id_promotion);
         $_SESSION['id_promotion'] = $id_promotion;
+        $promotionActive = promotionActive();
         $promotions = loadFile(promotion);
     }
 

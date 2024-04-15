@@ -3,5 +3,5 @@ libelle,dateDebut,dateFin,statut,id
 "Promotion 1",2018-01-01,2018-11-01,desactive,1
 "Promotion 3",2020-01-01,2020-11-01,desactive,3
 "Promotion 4",2021-01-01,2021-11-01,desactive,4
-"Promotion 5",2022-01-01,2022-11-01,"en cours",5
-"Promotion 6",2023-01-01,2023-11-01,desactive,6
+"Promotion 5",2022-01-01,2022-11-01,desactive,5
+"Promotion 6",2023-01-01,2023-11-01,"en cours",6

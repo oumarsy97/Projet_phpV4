@@ -20,5 +20,4 @@ id,libelle,status,id_promotion
 19,Hackeuse,active,4
 20,"Dev Data",active,4
 21,"Dev Python",active,4
-22,"Dev Python",active,5
-23,Hackeuse,desactive,5
+22,Python,active,5

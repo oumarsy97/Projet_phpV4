@@ -36,3 +36,12 @@ function dd($var) {
 //     return $resultat;
 // }
 
+function DateInFrench($Date) {
+    $Date = explode("-", $Date);
+    return $Date[2] . "/" . $Date[1] . "/" . $Date[0];
+}
+
+function DateNormale($Date) {
+    $Date = explode("/", $Date);
+    return $Date[2] . "-" . $Date[1] . "-" . $Date[0];
+}

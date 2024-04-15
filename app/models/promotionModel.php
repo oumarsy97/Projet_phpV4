@@ -58,16 +58,15 @@ $pro = [
             }
         }
     
-       
-        // Enregistrer les modifications dans le fichier CSV
-        $fp = fopen(promotion, 'w');
-        foreach ($promos as $promo) {
-            fputcsv($fp, $promo);
+            // Enregistrer les modifications dans le fichier CSV
+            $fp = fopen(promotion, 'w');
+            foreach ($promos as $promo) {
+                fputcsv($fp, $promo);
+            }
+            fclose($fp);
+            //return $promos;
         }
-        fclose($fp);
-        //return $promos;
-    }
-        
+            
     
 
 

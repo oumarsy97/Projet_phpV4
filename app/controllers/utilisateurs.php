@@ -31,7 +31,7 @@ if(isset($_POST['search'])&& $_POST['search'] != ''){
   $donnee = $_SESSION['donnee'];
   $nbr1 = count($donnee);
 
-$itemsPerPage = 1;
+$itemsPerPage = 4;
 $totalPages = ceil($nbr1 / $itemsPerPage);
 $users = paginateTable($_SESSION['donnee'], $itemsPerPage, $currentPage);
 

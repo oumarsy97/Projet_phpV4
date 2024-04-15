@@ -33,21 +33,38 @@
     </tr>
     </thead>
     <tbody>
-        <?php foreach ($promotions as $promo) : ?>
     <tr>
-    <img src="../app/views/assets/img/icon.png" alt="Placeholder Image">
-    <td><?= $promo['dateDebut'] ?></td>
-    <td><?= $promo['dateFin'] ?></td>
+    <td style="position: relative;"><img src="../app/views/assets/img/icon.png" alt="Placeholder Image" style="width: fit-content; width: 40px; height: 40px; position: absolute;  top: 0px;"/><?= $promotionActive['libelle'] ?></td>
+    <td><?=DateInFrench( $promotionActive['dateDebut'] )?></td>
+    <td><?=DateInFrench( $promotionActive['dateFin']) ?></td>
+    <td style="color: <?= ($promotionActive['statut'] === 'en cours' ? 'green' : 'red') ?>;"><?= $promotionActive['statut'] ?></td>
+    <td>
+    <form action="" method="post">
+        <input type="hidden" name="page" value="promotion">
+        <input type="hidden" name="changePromo" value="<?= $promotionActive['id'] ?>">
+        <button class="btneditpromo" type="submit"><i class="<?= $promotionActive['statut'] === 'en cours' ? "fa-sharp fa-thin fa-square-check editicon fa-solid" : "fa-sharp fa-thin fa-square editicon fa-solid"?>"></i></button>
+    </form>    
+</td>
+    </tr>
+    
+    
+        <?php foreach ($promotions as $promo) : 
+            if ($promo['statut'] != 'en cours') :?>
+    <tr>
+    <td style="position: relative;"><img src="../app/views/assets/img/icon.png" alt="Placeholder Image" style="width: fit-content; width: 40px; height: 40px; position: absolute;top: 0px;"><?= $promo['libelle'] ?></td>
+    <td><?= DateInFrench( $promotionActive['dateDebut'] )?></td>
+    <td><?= DateInFrench($promo['dateFin']) ?></td>
     <td style="color: <?= ($promo['statut'] === 'en cours' ? 'green' : 'red') ?>;"><?= $promo['statut'] ?></td>
     <td>
 
     <form action="" method="post">
         <input type="hidden" name="page" value="promotion">
         <input type="hidden" name="changePromo" value="<?= $promo['id'] ?>">
-        <i class="fa-sharp fa-thin fa-square-check"></i>
-        <button class="btneditpromo" type="submit"><i class="<?= $promo['statut'] === 'en cours' ? "fa-sharp fa-thin fa-square-check editicon fa-solid" : "fa-sharp fa-thin fa-square editicon fa-solid"?>"></i></button></td>
+        <button class="btneditpromo" type="submit"><i class="<?= $promo['statut'] === 'en cours' ? "fa-sharp fa-thin fa-square-check editicon fa-solid" : "fa-sharp fa-thin fa-square editicon fa-solid"?>"></i></button>
     </form>    
+</td>
     </tr>
+    <?php endif; ?>
         <?php endforeach; ?>
     </tbody>
     <tfoot>

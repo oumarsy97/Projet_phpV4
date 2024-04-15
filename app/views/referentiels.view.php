@@ -4,6 +4,9 @@
             <span>Référentiels</span>
             <span>Referentiels. Liste</span>
         </div>
+        <span class="span" style=" margin-left: 10px;font-size: 20px;font-weight: bold;">
+            Promotion: <span style="color: #009186;"><?= promotionActive()['libelle'] ?></span>
+        </span>
     <div class="list-refer">
         
         <div class="list-referantiel">
