@@ -32,13 +32,5 @@
        
     }
     $promotions = paginateTable($promotions, $itemparpage, $currentPagePromo);
-    if(isset($_POST['direction']) &&  $_POST['direction'] == 'ajouterreferentiel'){
-        include controllers . '/ajouterreferentielle.php';
-        //include views . '/ajouterreferentielle.view.php';
-    }else
-    if(isset($_POST['direction']) &&  $_POST['direction'] == 'ajouterpromotion'){
-        include controllers . '/promotion.php';
-        //include views . '/ajouterpromotion.view.php';
-    }else
     include views . '/promotion.view.php';
 

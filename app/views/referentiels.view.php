@@ -14,7 +14,10 @@
             <div class="card form">
               <div class="top">...</div>
               <!-- <div> -->
-              <img src="../app/views/assets/img/classe.jpg" alt="" />
+              <?php 
+              $image_path = imgs.$referentiel['image_path'];
+              ?>
+               <a href="?page=utilisateurs&id_referentiel=<?= $referentiel['id'] ?>"><img src="<?= $image_path ?>" alt="" style="width: 100%;height: 100%;" /></a> 
               <p style="font-weight: bold;font-size: 16px;"><?= $referentiel['libelle'] ?></p>
               <h2 style="color: <?= $referentiel['status'] == 'active' ? 'green' : 'red' ?>;"   ><?= $referentiel['status'] ?></h2>
               <!-- </div> -->
@@ -28,15 +31,16 @@
             <h3>Nouveau referentiel</h3>
           </div>
           
-            <form action="" method="post" class="bottom">
-              <input type="hidden" name="page" id="" value="referentiels"/>
-            <input type="hidden" name="newreferentiel" id="" value="newreferentiel"/>
-            <label for="libelle">Libelle</label>
-            <input type="text" name="libelle" id="" placeholder="Entrez le libelle"/>
-             <label for="Description">Description</label>
-            <input type="textarea"name="Description"id="" placeholder="Entrez la Description"/>
-            <button type="submit">Enregistrer</button>
-            </form>
+          <form action="" method="post" class="bottom" enctype="multipart/form-data">
+  <input type="hidden" name="page" id="" value="referentiels"/>
+  <input type="hidden" name="newreferentiel" id="" value="newreferentiel"/>
+  <label for="libelle">Libelle</label>
+  <input type="text" name="libelle" id="" placeholder="Entrez le libelle"/>
+  <label for="Description">Description</label>
+  <input type="textarea" name="Description" id="" placeholder="Entrez la Description"/>
+  <input type="file" name="image" id="image"/>
+  <button type="submit">Enregistrer</button>
+</form>
           
         </div>
        

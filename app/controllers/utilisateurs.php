@@ -2,8 +2,8 @@
 include models. '/utilisateursModel.php';
 
 //liste
-if(isset($_POST['id_referentiel'])){
-  $id_referentiel = $_POST['id_referentiel'];
+if(isset($_REQUEST['id_referentiel'])){
+  $id_referentiel = $_REQUEST['id_referentiel'];
   $_SESSION['id_referentiel'] = $id_referentiel;
   unset($_SESSION['search']);
   unset($_SESSION['donnee']);

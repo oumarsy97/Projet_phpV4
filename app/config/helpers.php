@@ -13,14 +13,24 @@
      define ("referentiels", "../data/referentiels.csv");
      define ("utilisateurs", "../data/utilisateurs.csv");
      define ("presences", "../data/presences.csv");
+     define("users", "../data/users.csv");
      define("listereferentiels", "../data/listreferentiels.csv");
-
+    define('imgs','../app/views/assets/img/referentiel/');
 function dd($var) {
     echo "<pre>";
     var_dump($var);
     echo "</pre>";
     die;
 }
+
+
+//function qui redirige vers une autre page
+function index($arg){
+    header('location: ' . $arg);
+}
+
+
+
 
 // function openfile($fichier){
 //     $tableau = json_decode(file_get_contents($fichier), true);

@@ -1,11 +1,14 @@
 <?php 
 
-$page = isset($_POST['page']) ? $_POST['page'] : 'loginController';
+$page = isset($_REQUEST['page']) ? $_REQUEST['page'] : 'loginController';
 include layouts.'/layout.php';
-if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+if ($page == 'loginController') {
     include controllers . '/loginController.php';
 }else
-if(key_exists($page, $pages)){
+if(1){
+    $data = $_REQUEST;
+ $page = $data['page'];
+
    //dd($page);
    $page!='search'? $_SESSION['page'] = $page: null;
     include layouts.'/menu.php';
@@ -18,8 +21,9 @@ include layouts.'/header.php';
 ?>
 </header>
     <?php
-    
+     
     include controllers . '/' . $pages[$page ];
+    //index("");
     include layouts.'/footer.php';
    }else{
     include views . '/404.php';
