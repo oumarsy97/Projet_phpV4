@@ -18,26 +18,30 @@
             <p>Promotion</p>
             <div class="input">
               <label for="libelle">libelle</label>
-              <input type="text" placeholder="entrez le libelle" />
+              <input type="text" placeholder="entrez le libelle" name ="libelle" value="<?php isset($_SESSION['libelle']) ? $_SESSION['libelle'] : '' ?>"/>
+              <span class="error labelle" style="color:red;"> <?php echo $errlibelle;?></span>
             </div>
             <div class="cont2 flex">
+            <span class="error date" style="color:red;"> <?php echo $errdate;?></span>
+            
               <div class="input">
                 <label for="Date-debut">Date de debut</label>
-                <input type="date" />
+                <input type="date"  name="date1"/>
+
+                <span class="error date1" style="color:red;"> <?php echo $errdate1;?></span>
               </div>
               <div class="input">
                 <label for="Date-debut">Date de fin</label>
-                <input type="date" />
+                <input type="date"  name="date2" />
+                <span class="error date2" style="color:red;"> <?php echo $errdate2;?></span>
               </div>
             </div>
             <div class="btn-grp">
              <form action="" method="post">
-              <input type="hidden" value="ajouterreferentiel"  name="direction"/>
-                <input type="hidden" value="ajouterreferentielle"  name="page"/>
-                <button type="submit">Ajouter referentielle</button>
+                <input type="hidden" value="nouveaupromo"  name="page"/>
+                <button type="submit" name="btnref" value="btnref">Ajouter referentielle</button>
               </form>
-              <input type="hidden" name="page" value="promotion">
-              <button style="background-color: #018f88;font-size: 18px;padding:  20px" type="submit" >Creer promotion</button>
+              <button style="background-color: #018f88;font-size: 18px;padding:  20px" type="submit" name="btnpro" value="btnpro" >Creer promotion</button>
             </div>
             <p>Referentielle</p>
           </div>

@@ -88,3 +88,33 @@ function paginateTable($array, $pageSize, $currentPage) {
     return  !empty($pagedArray) ?$pagedArray: $array;
         
 }
+
+function ReferentielsbyIdpromo($id_promotion){
+    $referentiels = getData(referentiels);
+    $referentielsbyIdpromo = [];
+    foreach ($referentiels as $referentiel) {
+        if($referentiel['id_promotion'] == $id_promotion){
+            $referentielsbyIdpromo[] = $referentiel;
+        }
+        
+    }
+    return $referentielsbyIdpromo;
+}
+
+function hashPassword($password) {
+    return password_hash($password, PASSWORD_DEFAULT);
+}
+
+function verifyPassword($password1, $password2) {
+    return password_verify($password1, $password2);
+}
+
+function getUser($login, $password){
+    $users = getData(users);
+    foreach ($users as $user) {
+        if ($user['username'] == $login && verifyPassword($password, $user['password'])) {
+            return $user;
+        }
+    }
+    return null;
+}

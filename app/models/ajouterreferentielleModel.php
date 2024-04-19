@@ -1,23 +1,12 @@
 <?php
-$referentiels = [[
-    'libelle' => 'Dev Web/mobile',
-    'status' => 'desactive'
-],
-[
-    'libelle' => 'Referent Digital',
-    'status' => 'desactive'
-],
-[
-    'libelle' => 'Dev Data',
-    'status' => 'desactive'
-],
-[
-    'libelle' => 'AWS',
-    'status' => 'desactive'
-],
-[
-    'libelle' => 'Dev Hackeuse',
-    'status' => 'desactive'
-]
-];
 
+function referentiels_Exist($libelle,$refs){
+    
+    foreach($refs as $referentiel){
+        if($referentiel['libelle'] == $libelle){
+            return true;
+        }
+    }
+    return false;
+}
+$referentiels = loadFile(listereferentiels);

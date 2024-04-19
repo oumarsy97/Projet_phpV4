@@ -15,12 +15,12 @@ $users = [
 
 //savefile('../data/users.csv', $users);
 
-function getUser($login, $password){
-    $users = getData(users);
-    foreach ($users as $user) {
-        if ($user['username'] == $login && $user['password'] == $password) {
-            return $user;
-        }
-    }
-    return null;
-}
+// function getUser($login, $password){
+//     $users = getData(users);
+//     foreach ($users as $user) {
+//         if ($user['username'] == $login && $user['password'] == $password) {
+//             return $user;
+//         }
+//     }
+//     return null;
+// }

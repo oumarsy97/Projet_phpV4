@@ -46,6 +46,7 @@ function allpresencePromotionActive(){
     $referentielsPromotionActive = referentielsActives();
    // dd($referentielsPromotionActive);
     $presences = getdata(presences);
+   
     
     $filtered = [];
     foreach($referentielsPromotionActive as $referentiel){

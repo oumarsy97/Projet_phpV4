@@ -18,8 +18,8 @@
         <div class="container">
           <p>selectionner un ou plusieurs referentiel (s)</p>
           <?php foreach ($referentiels as $referentiel) : ?>
-          <div class="checkbox1">
-            <input type="checkbox" name="web" />
+          <div class="checkbox1" >
+            <input type="checkbox" name="web"   <?= referentiels_Exist($referentiel['libelle'], $refs) ? 'checked disabled'  : '' ?>/>
             <label><?= $referentiel['libelle'] ?></label>
           </div>
           <?php endforeach; ?>

@@ -16,6 +16,7 @@ $pages = [
 include '../app/config/helpers.php';
 include data . '/file.php';
 include models . '/models.php';
+include config . '/validator.php';
 // if(!isset($_SESSION['user'])){
 //     include routes .'/routesconnexion.php';
 // }else{

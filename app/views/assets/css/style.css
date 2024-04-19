@@ -26,7 +26,7 @@
         
         .mess{
             padding: 4% 1%;
-            background: #F7D7DA;
+            /* background: #F7D7DA; */
             color: #BE878D;
         border-radius: 5px;
 
@@ -88,4 +88,9 @@ input:focus-within{
 
 a{
     color: #009087;
+}
+
+
+.log{
+    font-size: 27px;
 }

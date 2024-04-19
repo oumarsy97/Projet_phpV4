@@ -8,18 +8,19 @@ id,libelle,status,id_promotion,image_path
 7,"Dev Data",active,6,classe.jpg
 8,"Referent Digital",active,6,classe.jpg
 9,AWS,active,6,classe.jpg
-10,"Dev Hackeuse",desactive,6,classe.jpg
 11,"Dev Web/mobile",desactive,5,classe.jpg
 12,"Dev Data",active,5,classe.jpg
 13,"Referent Digital",active,5,classe.jpg
 14,AWS,active,5,classe.jpg
-16,Gamming,active,6,classe.jpg
 17,Gamming,active,4,classe.jpg
 18,AWS,active,4,classe.jpg
 19,Hackeuse,active,4,classe.jpg
 20,"Dev Data",active,4,classe.jpg
 21,"Dev Python",active,4,classe.jpg
 26,SQR,active,5,SQR.jpeg
-22,bonjour,active,5,bonjour.png
-23,fhhjk,active,5,fhhjk.jpeg
-24,jki,active,5,classe.jpg
+22,bonbon,active,5,classe.jpg
+23,bonbon1,active,5,bonbon1.png
+22,SRT,active,6,SRT.jpeg
+23,MPCI,active,6,MPCI.png
+24,RTT,active,1,RTT.png
+25,"                                     Referent Digital",active,1,"                                     Referent Digital.gif"

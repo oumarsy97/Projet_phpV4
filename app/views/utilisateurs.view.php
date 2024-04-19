@@ -11,13 +11,13 @@
         <span class="spanref">
             Référentiel: 
             <form action="" method="post">
-            <input type="hidden" name="page" value="utilisateurs">
-              <select name="id_referentiel" id="" >
+              <input type="hidden" name="page" value="utilisateurs">
+              <select name="id_referentiel" id=""  onchange="this.form.submit()">
                 <?php foreach($referentiels as $referentiel): ?>
                   <option      <?= isset($_SESSION['id_referentiel']) && $_SESSION['id_referentiel'] == $referentiel['id'] ? 'selected' : '' ?> value="<?= $referentiel['id'] ?>" ><?= $referentiel['libelle'] ?></option>
                   <?php endforeach; ?>
                 </select>
-                <button type="submit">Rafraîchir</button>
+               
               </form>
         </span>
     </div>

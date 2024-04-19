@@ -6,22 +6,19 @@
   justify-content: center;
   align-items: start;
  margin-left: .5%;
-  
-
-  gap: .4rem;
+  gap: .6drem;
   width: 99%;
-  height: 92%;
+  height: 94%;
   .card1 {
     background-color: white;
-    width: 24.3%;
-    height: 47%;
+    width: 26.3%;
+    height: 62%;
     padding: 1rem;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
     gap: 0.5rem;
   }
   
@@ -32,12 +29,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    height: 64%;
+    height: 46%;
     width: 100%;
     .card {
       background-color: white;
       width: 24.3%;
-      height: 74%;
+      height: 100%;
       padding: 1rem;
       border-radius: 5px;
      
@@ -63,6 +60,7 @@
     }
 
     .form {
+      position: relative;
       width: 21%;
       height: 70%;
       justify-content: flex-start;
@@ -70,9 +68,8 @@
       .bottom {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.2rem;
         width: 100%;
-        
         button{
           border: none;
           width: 100%;
@@ -82,7 +79,7 @@
           font-weight: bold;
           background-color: #018f88;
           color: white;
-          margin: auto;
+          
         }
 
         input{
@@ -91,6 +88,8 @@
           border-radius: 5px;
         }
       }
+
+      
     }
 
     img {
@@ -105,4 +104,69 @@
     width: 100%;
   }
 
-  
+.error {
+  color: red;
+  position: absolute;
+}
+
+.lib{
+  top: 30%;
+}
+
+.desc{
+  top: 54%;
+}
+
+input[type="file"] {
+ width: 80%;
+ border: none!important;
+}
+
+
+
+.toggle-switch {
+  position: relative!important;
+  display: inline-block!important;
+  width: 60px!important;
+  height: 34px!important;
+}
+
+.toggle-switch input {
+  opacity: 0!important;
+  width: 0!important;
+  height: 0!important;
+}
+
+.toggle-switch label {
+  display: block!important;
+  position: absolute!important;
+  cursor: pointer!important;
+  top: 0!important;
+  left: 0!important;
+  right: 0!important;
+  bottom: 0!important;
+  background-color: #ccc!important;
+  border-radius: 34px!important;
+  transition: background-color 0.3s!important;
+}
+
+.toggle-switch label:before {
+  content: ''!important;
+  position: absolute!important;
+  height: 26px!important;
+  width: 26px!important;
+  left: 4px!important;
+  bottom: 4px!important;
+  background-color: white!important;
+  border-radius: 50%!important;
+  transition: transform 0.3s!important;
+}
+
+.toggle-switch input:checked + label {
+  background-color: #018f88!important;
+}
+
+.toggle-switch input:checked + label:before {
+  transform: translateX(26px)!important;
+}
+

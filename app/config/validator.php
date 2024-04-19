@@ -1,7 +1,6 @@
 <?php
 function validateEmail($email){
-    $pattern = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
-    return preg_match($pattern, $email);
+    return  filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
 
@@ -23,4 +22,13 @@ function validateDate($date){
 function validateLibelle($libelle){
     $pattern = "/^[a-zA-Z0-9 ]+$/";
     return preg_match($pattern, $libelle);
+}
+
+function validateEntreDate($date1, $date2){
+    //minimum 4 mois
+    $date1 = date_create($date1);
+    $date2 = date_create($date2);
+    $interval = date_diff($date1, $date2);
+    return $interval->m >= 4;
+    
 }

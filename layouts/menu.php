@@ -1,5 +1,8 @@
 
-
+<?php
+$user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
+$action = ( $user['profil'] !== 'admin');
+?>
 <input type="checkbox" id="burger-checkbox" class="burger-checkbox" /> 
     <aside>
       <img src="logo.png" alt="" />
@@ -12,29 +15,30 @@
              <i class="fa fa-building" aria-hidden="true"></i>
             <form action="" method="post"> 
                 <input type="hidden" name="page" value="promotion">
-                <button>Promos</button>
-            </form>
+                <button id="monBouton" <?php if ($action): ?>disabled<?php endif; ?>>Promos</button>
+       
+                </form>
          
         </li>
         <li>
         <form action="" method="post"> 
          <i class="fa fa-calendar" aria-hidden="true"></i>   
                 <input type="hidden" name="page" value="referentiels">
-                <button>Referentiels</button>
+                <button <?php if ($action): ?>disabled<?php endif; ?>>Referentiels</button>
             </form>
         </li>
         <li >
             <i class="fa fa-user-circle-o" aria-hidden="true"></i> 
            <form action="" method="post"> 
                 <input type="hidden" name="page" value="utilisateurs">
-                <button>utilisateurs</button>
+                <button <?php if ($action): ?>disabled<?php endif; ?>>utilisateurs</button>
             </form>
         </li>
         <li>
              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
             <form action="" method="post"> 
                 <input type="hidden" name="page" value="visiteurController">
-                <button>Visiteurs</button>
+                <button <?php if ($action): ?>disabled<?php endif; ?>>Visiteurs</button>
             </form>
          
         </li>
